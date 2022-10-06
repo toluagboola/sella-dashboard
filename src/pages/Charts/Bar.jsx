@@ -26,7 +26,7 @@ const Bar = () => {
       <ChartsHeader category="Chart" title="Bar" />
 
       <ChartComponent
-        id="area-chart"
+        id="bar-chart"
         height="420px"
         primaryXAxis={barPrimaryXAxis}
         primaryYAxis={barPrimaryYAxis}
