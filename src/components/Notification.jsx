@@ -1,7 +1,6 @@
 import React from "react";
 import { MdOutlineCancel } from "react-icons/md";
 import { FiTrash2 } from "react-icons/fi";
-import { Button } from ".";
 import { chatData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -9,7 +8,7 @@ const Notification = () => {
   const { closePopup } = useStateContext();
 
   return (
-    <div className="absolute top-16 right-5 md:right-40 p-6 drop-shadow-xl bg-white dark:bg-[#42464D] rounded-2xl w-96 max-h-80 overflow-auto">
+    <div className="nav-item absolute top-16 right-5 md:right-40 p-4 drop-shadow-xl bg-white dark:bg-[#42464D] rounded-2xl md:w-96 w-80 max-h-80 overflow-auto">
       <div className="flex items-center justify-between pb-2 border-b-1">
         <p className="font-extrabold text-xl text-gray-600 dark:text-gray-200">
           Notifications
@@ -26,7 +25,7 @@ const Notification = () => {
 
       <div className="mt-4">
         {chatData.map((item, index) => (
-          <div className="p-4 flex justify-between">
+          <div className="p-4 flex justify-between" key={index}>
             <div className="flex justify-start items-center">
               <img
                 src={item.image}

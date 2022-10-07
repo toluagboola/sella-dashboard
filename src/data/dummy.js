@@ -622,19 +622,19 @@ export const cartData = [
 export const chatData = [
   {
     image: avatar2,
-    message: "Roman Joined the Team!",
-    desc: "Congratulate him",
+    message: "New customer signed up!",
+    desc: "Send a welcome email",
     time: "9:08 AM",
   },
   {
     image: avatar3,
-    message: "New message received",
-    desc: "Salma sent you new message",
+    message: "You have a message from Randy",
+    desc: "Send a response",
     time: "11:56 AM",
   },
   {
     image: avatar4,
-    message: "New Payment received",
+    message: "New Payment received!",
     desc: "Check your earnings",
     time: "4:39 AM",
   },
