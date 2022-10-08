@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AiOutlineCalendar,
+  AiOutlineShopping,
   AiOutlineShoppingCart,
   AiOutlineAreaChart,
   AiOutlineBarChart,
@@ -424,7 +425,7 @@ export const customersGrid = [
   {
     field: "ProjectName",
     headerText: "Project Name",
-    width: "150",
+    width: "120",
     textAlign: "Center",
   },
   {
@@ -453,7 +454,7 @@ export const customersGrid = [
   {
     field: "Location",
     headerText: "Location",
-    width: "150",
+    width: "120",
     textAlign: "Center",
   },
 
@@ -523,6 +524,10 @@ export const links = [
   {
     title: "Pages",
     links: [
+      {
+        name: "products",
+        icon: <AiOutlineShopping />,
+      },
       {
         name: "orders",
         icon: <AiOutlineShoppingCart />,
@@ -904,14 +909,14 @@ export const ordersGrid = [
   {
     field: "OrderItems",
     headerText: "Item",
-    width: "150",
+    width: "120",
     editType: "dropdownedit",
     textAlign: "Center",
   },
   {
     field: "CustomerName",
     headerText: "Customer Name",
-    width: "150",
+    width: "120",
     textAlign: "Center",
   },
   {
@@ -920,7 +925,7 @@ export const ordersGrid = [
     format: "C2",
     textAlign: "Center",
     editType: "numericedit",
-    width: "150",
+    width: "120",
   },
   {
     headerText: "Status",
@@ -939,7 +944,7 @@ export const ordersGrid = [
   {
     field: "Location",
     headerText: "Location",
-    width: "150",
+    width: "120",
     textAlign: "Center",
   },
 ];
