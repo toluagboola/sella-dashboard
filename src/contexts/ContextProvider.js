@@ -9,15 +9,18 @@ const initialState = {
   notification: false,
 };
 
+const colorMode = localStorage.getItem("colorMode");
+const themeMode = localStorage.getItem("themeMode");
+
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
   const [screenSize, setScreenSize] = useState(undefined);
   const [currentColor, setCurrentColor] = useState(
-    localStorage.getItem("colorMode")
+    colorMode === null ? "#03C9D7" : colorMode
   );
   const [currentMode, setCurrentMode] = useState(
-    localStorage.getItem("themeMode")
+    themeMode === null ? "Light" : themeMode
   );
   const [themeSettings, setThemeSettings] = useState(false);
 

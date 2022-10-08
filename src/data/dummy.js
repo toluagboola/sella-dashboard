@@ -157,7 +157,7 @@ const customerGridImage = (props) => (
 );
 
 const customerGridStatus = (props) => (
-  <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
+  <div className="flex gap-2 justify-center items-center text-gray-700 dark:text-gray-400 capitalize">
     <p
       style={{ background: props.StatusBg }}
       className="rounded-full h-3 w-3"
@@ -415,17 +415,17 @@ export const LinePrimaryYAxis = {
 };
 
 export const customersGrid = [
-  { type: "checkbox", width: "50" },
+  // { type: "checkbox", width: "50" },
   {
     headerText: "Name",
-    width: "150",
+    width: "170",
     template: customerGridImage,
     textAlign: "Center",
   },
   {
     field: "ProjectName",
     headerText: "Project Name",
-    width: "120",
+    width: "140",
     textAlign: "Center",
   },
   {
@@ -579,26 +579,26 @@ export const links = [
         name: "bar",
         icon: <AiOutlineBarChart />,
       },
-      {
-        name: "pie",
-        icon: <FiPieChart />,
-      },
-      {
-        name: "financial",
-        icon: <RiStockLine />,
-      },
-      {
-        name: "color-mapping",
-        icon: <BsBarChart />,
-      },
-      {
-        name: "pyramid",
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: "stacked",
-        icon: <AiOutlineBarChart />,
-      },
+      // {
+      //   name: "pie",
+      //   icon: <FiPieChart />,
+      // },
+      // {
+      //   name: "financial",
+      //   icon: <RiStockLine />,
+      // },
+      // {
+      //   name: "color-mapping",
+      //   icon: <BsBarChart />,
+      // },
+      // {
+      //   name: "pyramid",
+      //   icon: <GiLouvrePyramid />,
+      // },
+      // {
+      //   name: "stacked",
+      //   icon: <AiOutlineBarChart />,
+      // },
     ],
   },
 ];
