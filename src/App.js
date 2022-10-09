@@ -7,6 +7,7 @@ import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
 import {
   Ecommerce,
   Orders,
+  Product,
   Products,
   Calendar,
   Employees,
@@ -82,8 +83,9 @@ const App = () => {
 
                 {/* Pages */}
                 <Route path="/products" element={<Products />} />
+                <Route path={`/products/:id`} element={<Product />} />
                 <Route path="/orders" element={<Orders />} />
-                <Route path="/employees" element={<Employees />} />
+                {/* <Route path="/employees" element={<Employees />} /> */}
                 <Route path="/customers" element={<Customers />} />
 
                 {/* Apps */}

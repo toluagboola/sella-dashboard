@@ -44,6 +44,7 @@ import product5 from "./product5.jpg";
 import product6 from "./product6.jpg";
 import product7 from "./product7.jpg";
 import product8 from "./product8.jpg";
+import product9 from "./product9.jpg";
 
 export const gridOrderImage = (props) => (
   <div>
@@ -532,75 +533,75 @@ export const links = [
         name: "orders",
         icon: <AiOutlineShoppingCart />,
       },
-      {
-        name: "employees",
-        icon: <IoMdContacts />,
-      },
+      // {
+      //   name: "employees",
+      //   icon: <IoMdContacts />,
+      // },
       {
         name: "customers",
         icon: <RiContactsLine />,
       },
     ],
   },
-  {
-    title: "Apps",
-    links: [
-      {
-        name: "calendar",
-        icon: <AiOutlineCalendar />,
-      },
-      {
-        name: "kanban",
-        icon: <BsKanban />,
-      },
-      {
-        name: "editor",
-        icon: <FiEdit />,
-      },
-      {
-        name: "color-picker",
-        icon: <BiColorFill />,
-      },
-    ],
-  },
-  {
-    title: "Charts",
-    links: [
-      {
-        name: "line",
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: "area",
-        icon: <AiOutlineAreaChart />,
-      },
+  // {
+  //   title: "Apps",
+  //   links: [
+  //     {
+  //       name: "calendar",
+  //       icon: <AiOutlineCalendar />,
+  //     },
+  //     {
+  //       name: "kanban",
+  //       icon: <BsKanban />,
+  //     },
+  //     {
+  //       name: "editor",
+  //       icon: <FiEdit />,
+  //     },
+  //     {
+  //       name: "color-picker",
+  //       icon: <BiColorFill />,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Charts",
+  //   links: [
+  //     {
+  //       name: "line",
+  //       icon: <AiOutlineStock />,
+  //     },
+  //     {
+  //       name: "area",
+  //       icon: <AiOutlineAreaChart />,
+  //     },
 
-      {
-        name: "bar",
-        icon: <AiOutlineBarChart />,
-      },
-      // {
-      //   name: "pie",
-      //   icon: <FiPieChart />,
-      // },
-      // {
-      //   name: "financial",
-      //   icon: <RiStockLine />,
-      // },
-      // {
-      //   name: "color-mapping",
-      //   icon: <BsBarChart />,
-      // },
-      // {
-      //   name: "pyramid",
-      //   icon: <GiLouvrePyramid />,
-      // },
-      // {
-      //   name: "stacked",
-      //   icon: <AiOutlineBarChart />,
-      // },
-    ],
-  },
+  //     {
+  //       name: "bar",
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  // {
+  //   name: "pie",
+  //   icon: <FiPieChart />,
+  // },
+  // {
+  //   name: "financial",
+  //   icon: <RiStockLine />,
+  // },
+  // {
+  //   name: "color-mapping",
+  //   icon: <BsBarChart />,
+  // },
+  // {
+  //   name: "pyramid",
+  //   icon: <GiLouvrePyramid />,
+  // },
+  // {
+  //   name: "stacked",
+  //   icon: <AiOutlineBarChart />,
+  // },
+  //   ],
+  // },
 ];
 
 export const cartData = [
@@ -2042,6 +2043,7 @@ export const employeesData = [
 
 export const ordersData = [
   {
+    id: 1,
     OrderID: 10248,
     CustomerName: "Vinet",
     TotalAmount: 32.38,
@@ -2052,6 +2054,7 @@ export const ordersData = [
     ProductImage: product6,
   },
   {
+    id: 7,
     OrderID: 345653,
     CustomerName: "Carson Darrin",
     TotalAmount: 56.34,
@@ -2062,6 +2065,7 @@ export const ordersData = [
     ProductImage: product5,
   },
   {
+    id: 2,
     OrderID: 390457,
     CustomerName: "Fran Perez",
     TotalAmount: 93.31,
@@ -2072,6 +2076,7 @@ export const ordersData = [
     ProductImage: product7,
   },
   {
+    id: 7,
     OrderID: 893486,
     CustomerName: "Anika Viseer",
     TotalAmount: 93.31,
@@ -2082,6 +2087,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
+    id: 8,
     OrderID: 748975,
     CustomerName: "Miron Vitold",
     TotalAmount: 23.99,
@@ -2092,6 +2098,7 @@ export const ordersData = [
     ProductImage: product1,
   },
   {
+    id: 1,
     OrderID: 94757,
     CustomerName: "Omar Darobe",
     TotalAmount: 95.99,
@@ -2102,6 +2109,7 @@ export const ordersData = [
     ProductImage: product2,
   },
   {
+    id: 1,
     OrderID: 944895,
     CustomerName: "Lulia albu",
     TotalAmount: 17.99,
@@ -2112,6 +2120,7 @@ export const ordersData = [
     ProductImage: product3,
   },
   {
+    id: 5,
     OrderID: 845954,
     CustomerName: "Penjani",
     TotalAmount: 59.99,
@@ -2122,6 +2131,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
+    id: 4,
     OrderID: 845954,
     CustomerName: "Jie Yan",
     TotalAmount: 87.99,
@@ -2133,6 +2143,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
+    id: 3,
     OrderID: 874534,
     CustomerName: "Danai",
     TotalAmount: 122.99,
@@ -2144,6 +2155,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
+    id: 2,
     OrderID: 38489,
     CustomerName: "Miron",
     TotalAmount: 87.99,
@@ -2155,6 +2167,7 @@ export const ordersData = [
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
   },
   {
+    id: 19,
     OrderID: 24546,
     CustomerName: "Frank",
     TotalAmount: 84.99,
@@ -2166,6 +2179,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
+    id: 16,
     OrderID: 874534,
     CustomerName: "Danai",
     TotalAmount: 122.99,
@@ -2177,142 +2191,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
-    OrderID: 10248,
-    CustomerName: "Vinet",
-
-    TotalAmount: 32.38,
-    OrderItems: "Fresh Tomato",
-    Location: "USA",
-    Status: "pending",
-    StatusBg: "#FB9678",
-    ProductImage: product6,
-  },
-  {
-    OrderID: 345653,
-    CustomerName: "Carson Darrin",
-    TotalAmount: 56.34,
-    OrderItems: "Butter Scotch",
-    Location: "Delhi",
-    Status: "complete",
-    StatusBg: "#8BE78B",
-    ProductImage: product5,
-  },
-  {
-    OrderID: 390457,
-    CustomerName: "Fran Perez",
-    TotalAmount: 93.31,
-    OrderItems: "Candy Gucci",
-    Location: "New York",
-    Status: "active",
-    StatusBg: "#03C9D7",
-    ProductImage: product7,
-  },
-  {
-    OrderID: 893486,
-    CustomerName: "Anika Viseer",
-    TotalAmount: 93.31,
-    OrderItems: "Night Lamp",
-    Location: "Germany",
-    Status: "canceled",
-    StatusBg: "#FF5C8E",
-    ProductImage: product4,
-  },
-  {
-    OrderID: 748975,
-    CustomerName: "Miron Vitold",
-    TotalAmount: 23.99,
-    OrderItems: "Healthcare Erbology",
-    Location: "Spain",
-    Status: "rejected",
-    StatusBg: "red",
-    ProductImage: product1,
-  },
-  {
-    OrderID: 94757,
-    CustomerName: "Omar Darobe",
-    TotalAmount: 95.99,
-    OrderItems: "Makeup Lancome Rouge",
-    Location: "USA",
-    Status: "canceled",
-    StatusBg: "#FF5C8E",
-    ProductImage: product2,
-  },
-  {
-    OrderID: 944895,
-    CustomerName: "Lulia albu",
-    TotalAmount: 17.99,
-    OrderItems: "Skincare",
-    Location: "USA",
-    Status: "active",
-    StatusBg: "#03C9D7",
-    ProductImage: product3,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: "Penjani",
-    TotalAmount: 59.99,
-    OrderItems: "Headphone",
-    Location: "USA",
-    Status: "complete",
-    StatusBg: "#8BE78B",
-    ProductImage: product4,
-  },
-  {
-    OrderID: 845954,
-    CustomerName: "Jie Yan",
-    TotalAmount: 87.99,
-    OrderItems: "Shoes",
-    Location: "USA",
-    Status: "pending",
-    StatusBg: "#FB9678",
-    ProductImage:
-      "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
-  },
-  {
-    OrderID: 874534,
-    CustomerName: "Danai",
-    TotalAmount: 122.99,
-    OrderItems: "Watch",
-    Location: "USA",
-    Status: "canceled",
-    StatusBg: "#FF5C8E",
-    ProductImage:
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
-  },
-  {
-    OrderID: 38489,
-    CustomerName: "Miron",
-    TotalAmount: 87.99,
-    OrderItems: "Ice Cream",
-    Location: "USA",
-    Status: "active",
-    StatusBg: "#03C9D7",
-    ProductImage:
-      "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
-  },
-  {
-    OrderID: 24546,
-    CustomerName: "Frank",
-    TotalAmount: 84.99,
-    OrderItems: "Pan Cake",
-    Location: "Delhi",
-    Status: "complete",
-    StatusBg: "#8BE78B",
-    ProductImage:
-      "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
-  },
-  {
-    OrderID: 874534,
-    CustomerName: "Danai",
-    TotalAmount: 122.99,
-    OrderItems: "Watch",
-    Location: "USA",
-    Status: "canceled",
-    StatusBg: "#FF5C8E",
-    ProductImage:
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
-  },
-  {
+    id: 17,
     OrderID: 10248,
     CustomerName: "Vinet",
 
@@ -2324,6 +2203,7 @@ export const ordersData = [
     ProductImage: product6,
   },
   {
+    id: 17,
     OrderID: 345653,
     CustomerName: "Carson Darrin",
     TotalAmount: 56.34,
@@ -2334,6 +2214,7 @@ export const ordersData = [
     ProductImage: product5,
   },
   {
+    id: 19,
     OrderID: 390457,
     CustomerName: "Fran Perez",
     TotalAmount: 93.31,
@@ -2344,6 +2225,7 @@ export const ordersData = [
     ProductImage: product7,
   },
   {
+    id: 8,
     OrderID: 893486,
     CustomerName: "Anika Viseer",
     TotalAmount: 93.31,
@@ -2354,6 +2236,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
+    id: 8,
     OrderID: 748975,
     CustomerName: "Miron Vitold",
     TotalAmount: 23.99,
@@ -2364,6 +2247,7 @@ export const ordersData = [
     ProductImage: product1,
   },
   {
+    id: 15,
     OrderID: 94757,
     CustomerName: "Omar Darobe",
     TotalAmount: 95.99,
@@ -2374,6 +2258,7 @@ export const ordersData = [
     ProductImage: product2,
   },
   {
+    id: 6,
     OrderID: 944895,
     CustomerName: "Lulia albu",
     TotalAmount: 17.99,
@@ -2384,6 +2269,7 @@ export const ordersData = [
     ProductImage: product3,
   },
   {
+    id: 15,
     OrderID: 845954,
     CustomerName: "Penjani",
     TotalAmount: 59.99,
@@ -2394,6 +2280,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
+    id: 18,
     OrderID: 845954,
     CustomerName: "Jie Yan",
     TotalAmount: 87.99,
@@ -2405,6 +2292,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
+    id: 18,
     OrderID: 874534,
     CustomerName: "Danai",
     TotalAmount: 122.99,
@@ -2416,6 +2304,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
+    id: 10,
     OrderID: 38489,
     CustomerName: "Miron",
     TotalAmount: 87.99,
@@ -2427,6 +2316,7 @@ export const ordersData = [
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
   },
   {
+    id: 9,
     OrderID: 24546,
     CustomerName: "Frank",
     TotalAmount: 84.99,
@@ -2438,6 +2328,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
+    id:4,
     OrderID: 874534,
     CustomerName: "Danai",
     TotalAmount: 122.99,
@@ -2449,6 +2340,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
+    id: 2,
     OrderID: 10248,
     CustomerName: "Vinet",
 
@@ -2460,6 +2352,7 @@ export const ordersData = [
     ProductImage: product6,
   },
   {
+    id: 6,
     OrderID: 345653,
     CustomerName: "Carson Darrin",
     TotalAmount: 56.34,
@@ -2470,6 +2363,7 @@ export const ordersData = [
     ProductImage: product5,
   },
   {
+    id: 14,
     OrderID: 390457,
     CustomerName: "Fran Perez",
     TotalAmount: 93.31,
@@ -2480,6 +2374,7 @@ export const ordersData = [
     ProductImage: product7,
   },
   {
+    id: 3,
     OrderID: 893486,
     CustomerName: "Anika Viseer",
     TotalAmount: 93.31,
@@ -2490,6 +2385,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
+    id: 2,
     OrderID: 748975,
     CustomerName: "Miron Vitold",
     TotalAmount: 23.99,
@@ -2500,6 +2396,7 @@ export const ordersData = [
     ProductImage: product1,
   },
   {
+    id: 4,
     OrderID: 94757,
     CustomerName: "Omar Darobe",
     TotalAmount: 95.99,
@@ -2510,6 +2407,7 @@ export const ordersData = [
     ProductImage: product2,
   },
   {
+    id: 11,
     OrderID: 944895,
     CustomerName: "Lulia albu",
     TotalAmount: 17.99,
@@ -2520,6 +2418,7 @@ export const ordersData = [
     ProductImage: product3,
   },
   {
+    id: 19,
     OrderID: 845954,
     CustomerName: "Penjani",
     TotalAmount: 59.99,
@@ -2530,6 +2429,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
+    id: 18,
     OrderID: 845954,
     CustomerName: "Jie Yan",
     TotalAmount: 87.99,
@@ -2541,6 +2441,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
+    id: 18,
     OrderID: 874534,
     CustomerName: "Danai",
     TotalAmount: 122.99,
@@ -2552,6 +2453,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
+    id: 16,
     OrderID: 38489,
     CustomerName: "Miron",
     TotalAmount: 87.99,
@@ -2563,6 +2465,7 @@ export const ordersData = [
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
   },
   {
+    id: 10,
     OrderID: 24546,
     CustomerName: "Frank",
     TotalAmount: 84.99,
@@ -2574,6 +2477,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
+    id: 7,
     OrderID: 874534,
     CustomerName: "Danai",
     TotalAmount: 122.99,
@@ -2585,6 +2489,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
+    id: 6,
     OrderID: 10248,
     CustomerName: "Vinet",
 
@@ -2596,6 +2501,7 @@ export const ordersData = [
     ProductImage: product6,
   },
   {
+    id: 4,
     OrderID: 345653,
     CustomerName: "Carson Darrin",
     TotalAmount: 56.34,
@@ -2606,6 +2512,7 @@ export const ordersData = [
     ProductImage: product5,
   },
   {
+    id: 2,
     OrderID: 390457,
     CustomerName: "Fran Perez",
     TotalAmount: 93.31,
@@ -2616,6 +2523,7 @@ export const ordersData = [
     ProductImage: product7,
   },
   {
+    id: 4,
     OrderID: 893486,
     CustomerName: "Anika Viseer",
     TotalAmount: 93.31,
@@ -2626,6 +2534,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
+    id: 19,
     OrderID: 748975,
     CustomerName: "Miron Vitold",
     TotalAmount: 23.99,
@@ -2636,6 +2545,7 @@ export const ordersData = [
     ProductImage: product1,
   },
   {
+    id: 15,
     OrderID: 94757,
     CustomerName: "Omar Darobe",
     TotalAmount: 95.99,
@@ -2646,6 +2556,7 @@ export const ordersData = [
     ProductImage: product2,
   },
   {
+    id: 1,
     OrderID: 944895,
     CustomerName: "Lulia albu",
     TotalAmount: 17.99,
@@ -2656,6 +2567,7 @@ export const ordersData = [
     ProductImage: product3,
   },
   {
+    id: 14,
     OrderID: 845954,
     CustomerName: "Penjani",
     TotalAmount: 59.99,
@@ -2666,6 +2578,7 @@ export const ordersData = [
     ProductImage: product4,
   },
   {
+    id: 13,
     OrderID: 845954,
     CustomerName: "Jie Yan",
     TotalAmount: 87.99,
@@ -2677,6 +2590,7 @@ export const ordersData = [
       "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
   },
   {
+    id: 12,
     OrderID: 874534,
     CustomerName: "Danai",
     TotalAmount: 122.99,
@@ -2688,6 +2602,7 @@ export const ordersData = [
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
   },
   {
+    id: 12,
     OrderID: 38489,
     CustomerName: "Miron",
     TotalAmount: 87.99,
@@ -2699,6 +2614,7 @@ export const ordersData = [
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
   },
   {
+    id: 20,
     OrderID: 24546,
     CustomerName: "Frank",
     TotalAmount: 84.99,
@@ -2710,6 +2626,7 @@ export const ordersData = [
       "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
   {
+    id: 11,
     OrderID: 874534,
     CustomerName: "Danai",
     TotalAmount: 122.99,
@@ -2719,6 +2636,337 @@ export const ordersData = [
     StatusBg: "#FF5C8E",
     ProductImage:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+  },
+  {
+    id: 7,
+    OrderID: 10248,
+    CustomerName: "Vinet",
+
+    TotalAmount: 32.38,
+    OrderItems: "Fresh Tomato",
+    Location: "USA",
+    Status: "pending",
+    StatusBg: "#FB9678",
+    ProductImage: product6,
+  },
+  {
+    id: 10,
+    OrderID: 345653,
+    CustomerName: "Carson Darrin",
+    TotalAmount: 56.34,
+    OrderItems: "Butter Scotch",
+    Location: "Delhi",
+    Status: "complete",
+    StatusBg: "#8BE78B",
+    ProductImage: product5,
+  },
+  {
+    id: 9,
+    OrderID: 390457,
+    CustomerName: "Fran Perez",
+    TotalAmount: 93.31,
+    OrderItems: "Candy Gucci",
+    Location: "New York",
+    Status: "active",
+    StatusBg: "#03C9D7",
+    ProductImage: product7,
+  },
+  {
+    id: 8,
+    OrderID: 893486,
+    CustomerName: "Anika Viseer",
+    TotalAmount: 93.31,
+    OrderItems: "Night Lamp",
+    Location: "Germany",
+    Status: "canceled",
+    StatusBg: "#FF5C8E",
+    ProductImage: product4,
+  },
+  {
+    id: 8,
+    OrderID: 748975,
+    CustomerName: "Miron Vitold",
+    TotalAmount: 23.99,
+    OrderItems: "Healthcare Erbology",
+    Location: "Spain",
+    Status: "rejected",
+    StatusBg: "red",
+    ProductImage: product1,
+  },
+  {
+    id: 6,
+    OrderID: 94757,
+    CustomerName: "Omar Darobe",
+    TotalAmount: 95.99,
+    OrderItems: "Makeup Lancome Rouge",
+    Location: "USA",
+    Status: "canceled",
+    StatusBg: "#FF5C8E",
+    ProductImage: product2,
+  },
+  {
+    id: 1,
+    OrderID: 944895,
+    CustomerName: "Lulia albu",
+    TotalAmount: 17.99,
+    OrderItems: "Skincare",
+    Location: "USA",
+    Status: "active",
+    StatusBg: "#03C9D7",
+    ProductImage: product3,
+  },
+  {
+    id: 16,
+    OrderID: 845954,
+    CustomerName: "Penjani",
+    TotalAmount: 59.99,
+    OrderItems: "Headphone",
+    Location: "USA",
+    Status: "complete",
+    StatusBg: "#8BE78B",
+    ProductImage: product4,
+  },
+  {
+    id: 14,
+    OrderID: 845954,
+    CustomerName: "Jie Yan",
+    TotalAmount: 87.99,
+    OrderItems: "Shoes",
+    Location: "USA",
+    Status: "pending",
+    StatusBg: "#FB9678",
+    ProductImage:
+      "https://cdn.shopclues.com/images1/thumbnails/104158/320/320/148648730-104158193-1592481791.jpg",
+  },
+  {
+    id: 14,
+    OrderID: 874534,
+    CustomerName: "Danai",
+    TotalAmount: 122.99,
+    OrderItems: "Watch",
+    Location: "USA",
+    Status: "canceled",
+    StatusBg: "#FF5C8E",
+    ProductImage:
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+  },
+  {
+    id: 3,
+    OrderID: 38489,
+    CustomerName: "Miron",
+    TotalAmount: 87.99,
+    OrderItems: "Ice Cream",
+    Location: "USA",
+    Status: "active",
+    StatusBg: "#03C9D7",
+    ProductImage:
+      "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/dairy-free-ice-cream-eae372d.jpg",
+  },
+  {
+    id: 3,
+    OrderID: 24546,
+    CustomerName: "Frank",
+    TotalAmount: 84.99,
+    OrderItems: "Pan Cake",
+    Location: "Delhi",
+    Status: "complete",
+    StatusBg: "#8BE78B",
+    ProductImage:
+      "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+  },
+  {
+    id: 12,
+    OrderID: 874534,
+    CustomerName: "Danai",
+    TotalAmount: 122.99,
+    OrderItems: "Watch",
+    Location: "USA",
+    Status: "canceled",
+    StatusBg: "#FF5C8E",
+    ProductImage:
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pop-womens-garmin-watches-1641919013.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*",
+  },
+];
+
+export const productData = [
+  {
+    id: 1,
+    name: "White Beetle",
+    image: product1,
+    price: "$390.29",
+    description:
+      "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+    quantity: 15,
+  },
+  {
+    id: 2,
+    name: "Black Sunshades",
+    image: product2,
+    price: "$238.66",
+    description:
+      "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+    quantity: 7,
+  },
+  {
+    id: 3,
+    name: "Wristwatch",
+    image: product3,
+    price: "$579.62",
+    description:
+      "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+    quantity: 19,
+  },
+  {
+    id: 4,
+    name: "Red Nike Air Max",
+    image: product4,
+    price: "$698.67",
+    description:
+      "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+    quantity: 6,
+  },
+  {
+    id: 5,
+    name: "Pink Wineglass",
+    image: product5,
+    price: "$413.52",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+    quantity: 18,
+  },
+  {
+    id: 6,
+    name: "Tomatoes",
+    image: product6,
+    price: "$104.18",
+    description: "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
+    quantity: 1,
+  },
+  {
+    id: 7,
+    name: "Ice Cream with Toppings",
+    image: product7,
+    price: "$40.83",
+    description:
+      "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+    quantity: 13,
+  },
+  {
+    id: 8,
+    name: "Kite",
+    image: product8,
+    price: "$251.67",
+    description:
+      "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    quantity: 4,
+  },
+  {
+    id: 9,
+    name: "Lollipop",
+    image: product9,
+    price: "$502.51",
+    description:
+      "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+    quantity: 5,
+  },
+  {
+    id: 10,
+    name: "Toy Car",
+    image: product1,
+    price: "$777.92",
+    description:
+      "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+    quantity: 18,
+  },
+  {
+    id: 11,
+    name: "Sunshade",
+    image: product2,
+    price: "$530.57",
+    description:
+      "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+    quantity: 20,
+  },
+  {
+    id: 12,
+    name: "Watch",
+    image: product3,
+    price: "$512.06",
+    description:
+      "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+    quantity: 5,
+  },
+  {
+    id: 13,
+    name: "Nike Shoes",
+    image: product4,
+    price: "$956.58",
+    description:
+      "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+    quantity: 18,
+  },
+  {
+    id: 14,
+    name: "Cup",
+    image: product5,
+    price: "$492.40",
+    description:
+      "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+    quantity: 18,
+  },
+  {
+    id: 15,
+    name: "Red Fruit",
+    image: product6,
+    price: "$770.86",
+    description:
+      "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+    quantity: 4,
+  },
+  {
+    id: 16,
+    name: "Ice Cream Cone",
+    image: product7,
+    price: "$684.15",
+    description:
+      "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+    quantity: 8,
+  },
+  {
+    id: 17,
+    name: "Kite",
+    image: product8,
+    price: "$994.89",
+    description:
+      "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+    quantity: 7,
+  },
+  {
+    id: 18,
+    name: "Strawberry Flavored Sweet",
+    image: product9,
+    price: "$734.93",
+    description:
+      "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    quantity: 19,
+  },
+  {
+    id: 19,
+    name: "Beetle",
+    image: product1,
+    price: "$997.33",
+    description:
+      "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    quantity: 5,
+  },
+  {
+    id: 20,
+    name: "Ray Ban Shades",
+    image: product2,
+    price: "$274.38",
+    description:
+      "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+    quantity: 6,
   },
 ];
 

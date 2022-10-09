@@ -1,4 +1,5 @@
 export { default as Ecommerce } from "./Ecommerce";
+export { default as Product } from "./Product";
 export { default as Products } from "./Products";
 export { default as Kanban } from "./Kanban";
 export { default as Orders } from "./Orders";
