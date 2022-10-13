@@ -54,6 +54,19 @@
   border: none;
 }
 
+#gridComp, #grid_1556459708_0 {
+  font-family: "Lato", sans-serif;
+  border-radius: 20px;
+}
+
+.e-grid .e-gridheader {
+  border-radius: 20px 20px 0 0;
+}
+
+.e-grid .e-gridpager {
+  border-radius: 0 0 20px 20px;
+}
+
 /* .dark .e-spinner-pane  {
   background-color: #33373E;
 }
