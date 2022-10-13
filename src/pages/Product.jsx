@@ -11,7 +11,7 @@ function Product() {
 
   return (
     <>
-      <div className="m-2 md:m-10 mt-24 p-6 md:p-10 flex flex-col md:flex-row justify-center md:justify-start border-b-1">
+      <div className="m-2 md:m-10 mt-24 p-6 md:p-10 md:pb-20 flex flex-col md:flex-row justify-center md:justify-start border-b-1">
         <img
           src={product.image}
           alt=""
@@ -38,90 +38,44 @@ function Product() {
         </div>
       </div>
 
-      {/* <div className="m-2 md:m-10 p-6 align-middle">
-        <table
-          className="overflow-x-auto relative w-full divide-y divide-gray-200 rounded-2xl"
-          style={{ border: "1px solid gray", borderRadius: "1rem" }}
-        >
-          <thead>
-            <tr>
-              <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                Order ID
-              </th>
-              <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                Customer name
-              </th>
-              <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                Total Amount
-              </th>
-              <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                Status
-              </th>
-              <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                Location
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200">
-            {orders.map((item, index) => (
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">{item.OrderID}</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {item.CustomerName}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {item.TotalAmount}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span
-                    className="text-white py-1 px-2 capitalize rounded-2xl text-s"
-                    style={{ background: item.StatusBg }}
-                  >
-                    {item.Status}
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">{item.Location}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div> */}
-
       <div className="m-2 md:m-10 p-6 flex flex-col">
-        <div className="overflow-x-auto">
-          <div className="p-1.5 w-full inline-block align-middle">
-            <div className="overflow-hidden border rounded-lg">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead>
-                  <tr>
-                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                      Order ID
-                    </th>
-                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                      Customer name
-                    </th>
-                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                      Total Amount
-                    </th>
-                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                      Status
-                    </th>
-                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 uppercase tracking-wider">
-                      Location
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {orders.map((item, index) => (
+        <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
+          Product Orders
+        </p>
+        <div className="p-1.5 w-full inline-block align-middle">
+          <div className="overflow-hidden border dark:border-gray-500 rounded-lg overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-500">
+              <thead>
+                <tr>
+                  <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    Order ID
+                  </th>
+                  <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    Customer name
+                  </th>
+                  <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    Total Amount
+                  </th>
+                  <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    Status
+                  </th>
+                  <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    Location
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-500">
+                {orders.length > 0 ? (
+                  orders.map((item, index) => (
                     <tr>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
                         {item.OrderID}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
                         {item.CustomerName}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        {item.TotalAmount}
+                      <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
+                        ${item.TotalAmount}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span
@@ -131,14 +85,23 @@ function Product() {
                           {item.Status}
                         </span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
                         {item.Location}
                       </td>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  ))
+                ) : (
+                  <tr>
+                    <td
+                      colSpan="5"
+                      className="text-slate-900 dark:text-gray-200 text-center py-6"
+                    >
+                      No orders yet
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
