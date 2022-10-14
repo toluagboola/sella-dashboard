@@ -1,11 +1,10 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { productData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 function Products() {
   const { pathname } = useLocation();
-  const { currentColor, setProductForm } = useStateContext();
+  const { products, currentColor, setProductForm } = useStateContext();
 
   return (
     <div className="m-2 md:m-10 mt-24 p-6 md:p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
@@ -26,7 +25,7 @@ function Products() {
         </button>
       </div>
       <div className="flex flex-wrap justify-center md:justify-between">
-        {productData.map(
+        {products.map(
           (item, index) =>
             index <= 24 && (
               <a href={`${window.location.href}/${item.id}`} key={index}>

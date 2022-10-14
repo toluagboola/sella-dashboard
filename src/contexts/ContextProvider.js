@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import { productData } from "../data/dummy";
 
 const StateContext = createContext();
@@ -12,7 +12,7 @@ const initialState = {
 
 const colorMode = localStorage.getItem("colorMode");
 const themeMode = localStorage.getItem("themeMode");
-const allProducts = localStorage.getItem("products");
+const allProducts = JSON.parse(localStorage.getItem("products"));
 
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
@@ -30,27 +30,36 @@ export const ContextProvider = ({ children }) => {
   const [productForm, setProductForm] = useState(false);
   const [themeSettings, setThemeSettings] = useState(false);
 
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(products));
+  }, [products]);
+
+  // Set mode to either Light or Dark
   const setMode = (e) => {
     setCurrentMode(e.target.value);
     localStorage.setItem("themeMode", e.target.value);
     setThemeSettings(false);
   };
 
+  // Set the theme color
   const setColor = (color) => {
-    // console.log(e.target);
     setCurrentColor(color);
     localStorage.setItem("colorMode", color);
     setThemeSettings(false);
   };
 
-  const setProduct = () => {
-    setProducts([...products]);
+  // Save a new product
+  const setProduct = (item) => {
+    console.log(item);
+    setProducts([...products, item]);
   };
 
+  // Open popups in navbar
   const handleClick = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: true });
   };
 
+  // Close popups in navbar
   const closePopup = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: false });
   };
@@ -74,6 +83,8 @@ export const ContextProvider = ({ children }) => {
         setThemeSettings,
         setMode,
         setColor,
+        products,
+        setProduct,
       }}
     >
       {children}

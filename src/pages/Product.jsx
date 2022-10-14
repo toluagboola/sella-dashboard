@@ -5,9 +5,9 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 function Product() {
   const { id } = useParams();
-  const product = productData.filter((item) => item.id == id)[0];
+  const { products, currentColor } = useStateContext();
+  const product = products.filter((item) => item.id == id)[0];
   const orders = ordersData.filter((item) => item.id == id);
-  const { currentColor } = useStateContext();
 
   return (
     <>
@@ -67,7 +67,7 @@ function Product() {
               <tbody className="divide-y divide-gray-200 dark:divide-gray-500">
                 {orders.length > 0 ? (
                   orders.map((item, index) => (
-                    <tr>
+                    <tr key={index}>
                       <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
                         {item.OrderID}
                       </td>
