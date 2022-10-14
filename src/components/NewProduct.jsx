@@ -46,13 +46,13 @@ function NewProduct() {
       ></div>
 
       <div className="flex items-center min-h-screen px-4 py-8">
-        <div className="relative w-full max-w-lg p-6 mx-auto bg-white dark:bg-[#42464D] rounded-md shadow-lg">
+        <div className="relative w-full max-w-lg p-6 mx-auto bg-white dark:bg-secondary-dark-bg rounded-md shadow-lg">
           <div className="my-2 text-center sm:text-left">
-            <p className="text-2xl font-extrabold text-slate-900 dark:text-gray-200 pb-2 border-b-1">
+            <p className="text-2xl font-extrabold text-slate-900 dark:text-gray-200 pb-4 border-b-1">
               New Product
             </p>
 
-            <form className="mt-4" onSubmit={handleSubmit}>
+            <form className="mt-6" onSubmit={handleSubmit}>
               <div className="w-full mb-4">
                 <label
                   htmlFor="name"
@@ -65,7 +65,7 @@ function NewProduct() {
                   type="text"
                   ref={nameRef}
                   placeholder="Product name"
-                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
+                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-gray-300 bg-white dark:bg-[#42464D] border border-solid border-gray-300 dark:border-gray-400 dark:focus:border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
                 />
               </div>
 
@@ -81,7 +81,7 @@ function NewProduct() {
                   type="number"
                   ref={priceRef}
                   placeholder="How mucn is this product?"
-                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
+                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-gray-300 bg-white dark:bg-[#42464D] border border-solid border-gray-300 dark:border-gray-400 dark:focus:border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
                 />
               </div>
 
@@ -97,7 +97,7 @@ function NewProduct() {
                   type="number"
                   ref={quantityRef}
                   placeholder="How many pieces are in stock?"
-                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
+                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-gray-300 bg-white dark:bg-[#42464D] border border-solid border-gray-300 dark:border-gray-400 dark:focus:border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
                 />
               </div>
 
@@ -113,7 +113,7 @@ function NewProduct() {
                   type="text"
                   ref={descRef}
                   placeholder="Describe the product"
-                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
+                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-gray-300 bg-white dark:bg-[#42464D] border border-solid border-gray-300 dark:border-gray-400 dark:focus:border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
                 ></textarea>
               </div>
 
@@ -129,20 +129,21 @@ function NewProduct() {
                   type="file"
                   ref={fileRef}
                   accept=".jpeg, .png, .jpg, .webp"
-                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
+                  className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 dark:text-gray-300 bg-white dark:bg-[#42464D] border border-solid border-gray-300 dark:border-gray-400 dark:focus:border-gray-300 rounded transition ease-in-out mt-2 focus:text-gray-700 focus:bg-white focus:border-gray-400 border-opacity-95 focus:outline-none"
                 />
               </div>
 
-              <div className="items-center gap-2 mt-3 sm:flex">
+              <div className="items-center gap-2 pt-4 sm:flex">
                 <button
                   type="submit"
-                  className="w-full mt-2 p-2.5 flex-1 text-white bg-red-600 rounded-md outline-none ring-offset-2 focus:ring-2"
+                  className="w-full mt-2 p-2.5 flex-1 text-white rounded-md outline-none ring-offset-2 focus:ring-2"
                   style={{ backgroundColor: currentColor }}
                 >
                   Save
                 </button>
                 <button
-                  className="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md outline-none border ring-offset-2 focus:ring-2"
+                  type="button"
+                  className="w-full mt-2 p-2.5 flex-1 text-gray-800 dark:text-gray-300 rounded-md outline-none border ring-offset-2 focus:ring-2"
                   onClick={() => setProductForm(false)}
                 >
                   Cancel
