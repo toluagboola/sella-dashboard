@@ -1,22 +1,36 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { productData } from "../data/dummy";
-import { ChartsHeader } from "../components";
+import { useStateContext } from "../contexts/ContextProvider";
 
 function Products() {
   const { pathname } = useLocation();
+  const { currentColor, setProductForm } = useStateContext();
+
   return (
     <div className="m-2 md:m-10 mt-24 p-6 md:p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <ChartsHeader category="Page" title="Products" />
+      <div className="flex justify-between items-center mb-10">
+        <div>
+          <p className="text-gray-400">Page</p>
+          <p className="text-3xl font-extrabold tracking-tight dark:text-gray-200 text-slate-900">
+            Products
+          </p>
+        </div>
+        <button
+          type="button"
+          style={{ backgroundColor: currentColor }}
+          className="text-white rounded-xl p-4 hover:opacity-90"
+          onClick={() => setProductForm(true)}
+        >
+          + Add new product
+        </button>
+      </div>
       <div className="flex flex-wrap justify-center md:justify-between">
         {productData.map(
           (item, index) =>
             index <= 24 && (
-              <a href={`${window.location.href}/${item.id}`}>
-                <div
-                  key={index}
-                  className="shadow-lg rounded-2xl flex flex-col p-4 m-4 w-48 md:w-38 dark:bg-[#464950] hover:bg-gray-200 dark:hover:bg-gray-700"
-                >
+              <a href={`${window.location.href}/${item.id}`} key={index}>
+                <div className="shadow-lg rounded-2xl flex flex-col p-4 m-4 w-48 md:w-38 dark:bg-[#464950] hover:bg-gray-200 dark:hover:bg-gray-700">
                   <img
                     src={item.image}
                     alt="Person"

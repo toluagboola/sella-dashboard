@@ -3,7 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
-import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
+import {
+  Navbar,
+  Footer,
+  Sidebar,
+  ThemeSettings,
+  NewProduct,
+} from "./components";
 import {
   Ecommerce,
   Orders,
@@ -31,6 +37,7 @@ import "./App.css";
 const App = () => {
   const {
     activeMenu,
+    productForm,
     themeSettings,
     setThemeSettings,
     currentColor,
@@ -75,6 +82,7 @@ const App = () => {
 
             <div>
               {themeSettings && <ThemeSettings />}
+              {productForm && <NewProduct />}
 
               <Routes>
                 {/* Dashboard */}

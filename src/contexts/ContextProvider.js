@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { productData } from "../data/dummy";
 
 const StateContext = createContext();
 
@@ -11,6 +12,7 @@ const initialState = {
 
 const colorMode = localStorage.getItem("colorMode");
 const themeMode = localStorage.getItem("themeMode");
+const allProducts = localStorage.getItem("products");
 
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
@@ -22,6 +24,10 @@ export const ContextProvider = ({ children }) => {
   const [currentMode, setCurrentMode] = useState(
     themeMode === null ? "Light" : themeMode
   );
+  const [products, setProducts] = useState(
+    allProducts === null ? productData : allProducts
+  );
+  const [productForm, setProductForm] = useState(false);
   const [themeSettings, setThemeSettings] = useState(false);
 
   const setMode = (e) => {
@@ -35,6 +41,10 @@ export const ContextProvider = ({ children }) => {
     setCurrentColor(color);
     localStorage.setItem("colorMode", color);
     setThemeSettings(false);
+  };
+
+  const setProduct = () => {
+    setProducts([...products]);
   };
 
   const handleClick = (clicked) => {
@@ -58,6 +68,8 @@ export const ContextProvider = ({ children }) => {
         setScreenSize,
         currentColor,
         currentMode,
+        productForm,
+        setProductForm,
         themeSettings,
         setThemeSettings,
         setMode,
