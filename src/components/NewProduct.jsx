@@ -5,13 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 function NewProduct() {
   const { currentColor, setProduct, setProductForm } = useStateContext();
-  const formData = {
-    name: "",
-    price: "",
-    quantity: "",
-    description: "",
-    file: "",
-  };
 
   const nameRef = useRef();
   const priceRef = useRef();
