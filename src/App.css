@@ -1,5 +1,9 @@
 @import url("https://cdn.syncfusion.com/ej2/material.css");
 
+.Toastify__toast {
+  font-family: "Lato", sans-serif !important;
+}
+
 .sidebar {
   box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
 }
@@ -54,7 +58,8 @@
   border: none;
 }
 
-#gridComp, #grid_1556459708_0 {
+#gridComp,
+#grid_1556459708_0 {
   font-family: "Lato", sans-serif;
   border-radius: 20px;
 }

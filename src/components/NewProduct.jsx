@@ -1,8 +1,17 @@
 import React, { useRef } from "react";
+import { toast } from "react-toastify";
 import { useStateContext } from "../contexts/ContextProvider";
+import "react-toastify/dist/ReactToastify.css";
 
 function NewProduct() {
   const { currentColor, setProduct, setProductForm } = useStateContext();
+  const formData = {
+    name: "",
+    price: "",
+    quantity: "",
+    description: "",
+    file: "",
+  };
 
   const nameRef = useRef();
   const priceRef = useRef();
@@ -25,17 +34,42 @@ function NewProduct() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const product = {
-      id: Date.now(),
-      name: nameRef.current.value,
-      price: `$${priceRef.current.value}`,
-      quantity: quantityRef.current.value,
-      description: descRef.current.value,
-      image: await convertToBase64(fileRef.current.files[0]),
-    };
+    if (
+      !nameRef.current.value ||
+      !priceRef.current.value ||
+      !quantityRef.current.value ||
+      !descRef.current.value ||
+      fileRef.current.files.length === 0
+    ) {
+      toast.error(
+        "Missing fields detected! Please fill all fields before submission.",
+        {
+          position: toast.POSITION.TOP_RIGHT,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+        }
+      );
+    } else {
+      const product = {
+        id: Date.now(),
+        name: nameRef.current.value,
+        price: `$${priceRef.current.value}`,
+        quantity: quantityRef.current.value,
+        description: descRef.current.value,
+        image: await convertToBase64(fileRef.current.files[0]),
+      };
 
-    setProduct(product);
-    setProductForm(false);
+      setProduct(product);
+      setProductForm(false);
+
+      toast.success("Product successfully added!", {
+        position: toast.POSITION.TOP_RIGHT,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+      });
+    }
   };
 
   return (
