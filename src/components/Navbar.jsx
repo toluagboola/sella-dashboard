@@ -63,12 +63,6 @@ const Navbar = () => {
 
       <div className="flex">
         <NavButton
-          title="Cart"
-          customFunc={() => handleClick("cart")}
-          color={currentColor}
-          icon={<FiShoppingCart />}
-        />
-        <NavButton
           title="Chat"
           dotColor="#03C9D7"
           customFunc={() => handleClick("chat")}
@@ -98,7 +92,6 @@ const Navbar = () => {
           </div>
         </TooltipComponent>
 
-        {isClicked.cart && <Cart />}
         {isClicked.chat && <Chat />}
         {isClicked.notification && <Notification />}
         {isClicked.userProfile && <UserProfile />}
