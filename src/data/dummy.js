@@ -52,6 +52,8 @@ export const gridOrderImage = (props) => (
       className="rounded-xl h-20 md:ml-3"
       src={props.ProductImage}
       alt="order-item"
+      width="90"
+      height="90"
     />
   </div>
 );
@@ -863,7 +865,7 @@ export const themeColors = [
     color: "#7352FF",
   },
   {
-    name: "red-theme",
+    name: "pink-theme",
     color: "#FF5C8E",
   },
   {
@@ -873,6 +875,10 @@ export const themeColors = [
   {
     color: "#FB9678",
     name: "orange-theme",
+  },
+  {
+    color: "#dc2424",
+    name: "red-theme",
   },
 ];
 

@@ -6,6 +6,7 @@ import {
   earningData,
   SparklineAreaData,
   eComPieChartData,
+  ordersData,
 } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -58,7 +59,73 @@ const Ecommerce = () => {
         </div>
       </div>
 
+      <div className="flex gap-10 flex-wrap justify-center m-3">
+        {/* Recent Orders */}
+        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-4 w-full md:w-auto inline-block align-middle">
+          <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
+            Recent Orders
+          </p>
+
+          <div className="p-1.5 w-full inline-block align-middle">
+            <div className="overflow-hidden border dark:border-gray-500 rounded-lg overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-500">
+                <thead>
+                  <tr>
+                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      Order ID
+                    </th>
+                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      Customer name
+                    </th>
+                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      Total Amount
+                    </th>
+                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      Status
+                    </th>
+                    <th className="px-6 py-3 text-left text-s font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      Location
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody className="divide-y divide-gray-200 dark:divide-gray-500">
+                  {ordersData.map(
+                    (item, index) =>
+                      index <= 6 && (
+                        <tr key={index}>
+                          <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
+                            {item.OrderID}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
+                            {item.CustomerName}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
+                            ${item.TotalAmount}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <span
+                              className="text-white py-1 px-2 capitalize rounded-2xl text-s"
+                              style={{ background: item.StatusBg }}
+                            >
+                              {item.Status}
+                            </span>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-slate-900 dark:text-gray-200">
+                            {item.Location}
+                          </td>
+                        </tr>
+                      )
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="flex gap-10 flex-wrap justify-center">
+        {/* Expense & Budget */}
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
           <div className="flex justify-between">
             --{" "}
