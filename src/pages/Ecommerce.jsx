@@ -1,11 +1,11 @@
 import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
-import { Stacked, Pie, Button, SparkLine } from "../components";
+import { Stacked, LineChart, Button, SparkLine } from "../components";
 import {
   earningData,
   SparklineAreaData,
-  eComPieChartData,
+  customersData,
   ordersData,
   productData,
   recentTransactions,
@@ -58,6 +58,148 @@ const Ecommerce = () => {
               <p className="text-sm text-gray-400 mt-1">{item.title}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-6 lg:gap-6 md:gap-x-0 md:gap-y-6 m-6">
+        {/* Sales Overview */}
+        <div className="col-span-2 bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 w-full md:w-auto inline-block align-middle shadow-lg">
+          <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
+            Sales Overview
+          </p>
+          <div className="md:w-full overflow-auto">
+            <LineChart />
+          </div>
+        </div>
+
+        {/* Recent Transactions */}
+        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 shadow-lg">
+          <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
+            Recent Transactions
+          </p>
+
+          <div className="flex flex-col">
+            {recentTransactions.map((item, index) => (
+              <div className="flex justify-between items-center" key={index}>
+                <div className="p-2 flex justify-start items-center">
+                  <button
+                    style={{ color: item.iconColor, background: item.iconBg }}
+                    className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
+                  >
+                    {item.icon}
+                  </button>
+                  <div className="pl-4">
+                    <p className="font-extrabold text-gray-800 dark:text-gray-200">
+                      {item.title}
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+                <p className={`${item.pcColor}`}>{item.amount}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-6 lg:gap-6 md:gap-x-0 md:gap-y-6 m-6">
+        {/* Top Customers */}
+        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 shadow-lg">
+          <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
+            Top Customers
+          </p>
+
+          <div className="flex flex-col">
+            {customersData.map(
+              (item, index) =>
+                index <= 6 && (
+                  <div className="p-2 flex justify-start items-center">
+                    <img
+                      src={item.CustomerImage}
+                      alt="Person"
+                      className="w-10 h-10 rounded-full"
+                    />
+                    <div className="pl-4">
+                      <p className="font-extrabold text-gray-800 dark:text-gray-200">
+                        {item.CustomerName}
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm">
+                        {item.CustomerEmail}
+                      </p>
+                    </div>
+                  </div>
+                )
+            )}
+          </div>
+        </div>
+
+        {/* Revenue Updates */}
+        <div className="col-span-2 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl md:w-full shadow-lg">
+          <div className="flex justify-between">
+            <p className="font-semibold text-2xl">Revenue Updates</p>
+            <div className="flex items-center gap-4">
+              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Expense</span>
+              </p>
+
+              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Budget</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 flex gap-10 flex-wrap justify-center">
+            <div className="border-r-1 border-color m-4 pr-10">
+              <div>
+                <p>
+                  <span className="text-3xl font-semibold">$93,438</span>
+                  <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
+                    23%
+                  </span>
+                </p>
+                <p className="text-gray-500 mt-1">Budget</p>
+              </div>
+              <div className="mt-8">
+                <p>
+                  <span className="text-3xl font-semibold">$48,438</span>
+                </p>
+                <p className="text-gray-500 mt-1">Expense</p>
+              </div>
+
+              <div className="mt-5">
+                <SparkLine
+                  currentColor={currentColor}
+                  id="line-sparkline"
+                  type="Line"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color={currentColor}
+                />
+              </div>
+
+              <div className="mt-10">
+                <Button
+                  color="white"
+                  bgColor={currentColor}
+                  text="Download Report"
+                  borderRadius="10px"
+                />
+              </div>
+            </div>
+
+            <div>
+              <Stacked width="320px" height="360px" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -125,7 +267,7 @@ const Ecommerce = () => {
           </div>
         </div>
 
-        {/* Top Customers, transaction history, top products */}
+        {/* Top Products */}
         <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 shadow-lg">
           <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
             Top Products
@@ -158,106 +300,6 @@ const Ecommerce = () => {
                   </a>
                 )
             )}
-          </div>
-        </div>
-      </div>
-
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-6 lg:gap-6 md:gap-x-0 md:gap-y-6 m-6">
-        {/* Recent Transactions */}
-        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 shadow-lg">
-          <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
-            Recent Transactions
-          </p>
-
-          <div className="flex flex-col">
-            {recentTransactions.map((item, index) => (
-              <div className="flex justify-between items-center" key={index}>
-                <div className="p-2 flex justify-start items-center">
-                  <button
-                    style={{ color: item.iconColor, background: item.iconBg }}
-                    className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
-                  >
-                    {item.icon}
-                  </button>
-                  <div className="pl-4">
-                    <p className="font-extrabold text-gray-800 dark:text-gray-200">
-                      {item.title}
-                    </p>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-                <p className={`${item.pcColor}`}>{item.amount}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Expense & Budget */}
-        <div className="col-span-2 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-4 rounded-2xl md:w-full shadow-lg">
-          <div className="flex justify-between">
-            --{" "}
-            <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
-                <span>
-                  <GoPrimitiveDot />
-                </span>
-                <span>Expense</span>
-              </p>
-
-              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
-                <span>
-                  <GoPrimitiveDot />
-                </span>
-                <span>Budget</span>
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-10 flex gap-10 flex-wrap justify-center">
-            <div className="border-r-1 border-color m-4 pr-10">
-              <div>
-                <p>
-                  <span className="text-3xl font-semibold">$93,438</span>
-                  <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
-                    23%
-                  </span>
-                </p>
-                <p className="text-gray-500 mt-1">Budget</p>
-              </div>
-              <div className="mt-8">
-                <p>
-                  <span className="text-3xl font-semibold">$48,438</span>
-                </p>
-                <p className="text-gray-500 mt-1">Expense</p>
-              </div>
-
-              <div className="mt-5">
-                <SparkLine
-                  currentColor={currentColor}
-                  id="line-sparkline"
-                  type="Line"
-                  height="80px"
-                  width="250px"
-                  data={SparklineAreaData}
-                  color={currentColor}
-                />
-              </div>
-
-              <div className="mt-10">
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Download Report"
-                  borderRadius="10px"
-                />
-              </div>
-            </div>
-
-            <div>
-              <Stacked width="320px" height="360px" />
-            </div>
           </div>
         </div>
       </div>
