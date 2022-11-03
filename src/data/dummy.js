@@ -702,7 +702,7 @@ export const recentTransactions = [
     desc: "Money Added",
     iconColor: "#03C9D7",
     iconBg: "#E5FAFB",
-    pcColor: "green-600",
+    pcColor: "text-green-600",
   },
   {
     icon: <BsShield />,
@@ -711,7 +711,7 @@ export const recentTransactions = [
     title: "Wallet",
     iconColor: "rgb(0, 194, 146)",
     iconBg: "rgb(235, 250, 242)",
-    pcColor: "red-600",
+    pcColor: "text-red-600",
   },
   {
     icon: <FiCreditCard />,
@@ -721,7 +721,7 @@ export const recentTransactions = [
     iconColor: "rgb(255, 244, 229)",
     iconBg: "rgb(254, 201, 15)",
 
-    pcColor: "green-600",
+    pcColor: "text-green-600",
   },
   {
     icon: <TiTick />,
@@ -731,7 +731,7 @@ export const recentTransactions = [
 
     iconColor: "rgb(228, 106, 118)",
     iconBg: "rgb(255, 244, 229)",
-    pcColor: "green-600",
+    pcColor: "text-green-600",
   },
   {
     icon: <BsCurrencyDollar />,
@@ -741,7 +741,7 @@ export const recentTransactions = [
     desc: "Payment Sent",
     iconColor: "#03C9D7",
     iconBg: "#E5FAFB",
-    pcColor: "red-600",
+    pcColor: "text-red-600",
   },
 ];
 

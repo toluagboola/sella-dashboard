@@ -8,6 +8,7 @@ import {
   eComPieChartData,
   ordersData,
   productData,
+  recentTransactions,
 } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -60,9 +61,9 @@ const Ecommerce = () => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-6 lg:gap-6 md:gap-x-0 md:gap-y-6 m-3">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-6 lg:gap-6 md:gap-x-0 md:gap-y-6 m-6">
         {/* Recent Orders */}
-        <div className="col-span-2 bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 w-full md:w-auto inline-block align-middle">
+        <div className="col-span-2 bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 w-full md:w-auto inline-block align-middle shadow-lg">
           <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
             Recent Orders
           </p>
@@ -125,7 +126,7 @@ const Ecommerce = () => {
         </div>
 
         {/* Top Customers, transaction history, top products */}
-        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-6">
+        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 shadow-lg">
           <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
             Top Products
           </p>
@@ -137,7 +138,7 @@ const Ecommerce = () => {
                   <a
                     href={`${window.location.origin}/products/${item.id}`}
                     key={index}
-                    className="rounded-xl hover:bg-[#464950]"
+                    className="rounded-xl dark:hover:bg-[#464950] hover:shadow-lg"
                   >
                     <div className="p-2 flex justify-start items-center">
                       <img
@@ -161,9 +162,40 @@ const Ecommerce = () => {
         </div>
       </div>
 
-      <div className="flex gap-10 flex-wrap justify-center">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-6 lg:gap-6 md:gap-x-0 md:gap-y-6 m-6">
+        {/* Recent Transactions */}
+        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 shadow-lg">
+          <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
+            Recent Transactions
+          </p>
+
+          <div className="flex flex-col">
+            {recentTransactions.map((item, index) => (
+              <div className="flex justify-between items-center" key={index}>
+                <div className="p-2 flex justify-start items-center">
+                  <button
+                    style={{ color: item.iconColor, background: item.iconBg }}
+                    className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
+                  >
+                    {item.icon}
+                  </button>
+                  <div className="pl-4">
+                    <p className="font-extrabold text-gray-800 dark:text-gray-200">
+                      {item.title}
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+                <p className={`${item.pcColor}`}>{item.amount}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Expense & Budget */}
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
+        <div className="col-span-2 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-4 rounded-2xl md:w-full shadow-lg">
           <div className="flex justify-between">
             --{" "}
             <div className="flex items-center gap-4">
