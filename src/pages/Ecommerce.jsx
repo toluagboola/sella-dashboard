@@ -7,6 +7,7 @@ import {
   SparklineAreaData,
   eComPieChartData,
   ordersData,
+  productData,
 } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
@@ -59,9 +60,9 @@ const Ecommerce = () => {
         </div>
       </div>
 
-      <div className="flex gap-10 flex-wrap justify-center m-3">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-6 lg:gap-6 md:gap-x-0 md:gap-y-6 m-3">
         {/* Recent Orders */}
-        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-4 w-full md:w-auto inline-block align-middle">
+        <div className="col-span-2 bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 w-full md:w-auto inline-block align-middle">
           <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
             Recent Orders
           </p>
@@ -120,6 +121,42 @@ const Ecommerce = () => {
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+
+        {/* Top Customers, transaction history, top products */}
+        <div className="bg-white dark:bg-secondary-dark-bg rounded-2xl p-6">
+          <p className="font-bold text-2xl pb-4 pl-1.5 text-slate-900 dark:text-gray-200">
+            Top Products
+          </p>
+
+          <div className="flex flex-col">
+            {productData.map(
+              (item, index) =>
+                index <= 7 && (
+                  <a
+                    href={`${window.location.origin}/products/${item.id}`}
+                    key={index}
+                    className="rounded-xl hover:bg-[#464950]"
+                  >
+                    <div className="p-2 flex justify-start items-center">
+                      <img
+                        src={item.image}
+                        alt="Person"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <div className="pl-4">
+                        <p className="font-extrabold text-gray-800 dark:text-gray-200">
+                          {item.name}
+                        </p>
+                        <p className="text-gray-500 dark:text-gray-400 text-sm">
+                          {item.price}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                )
+            )}
           </div>
         </div>
       </div>

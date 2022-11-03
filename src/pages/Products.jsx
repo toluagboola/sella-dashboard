@@ -1,9 +1,7 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { useStateContext } from "../contexts/ContextProvider";
 
 function Products() {
-  const { pathname } = useLocation();
   const { products, currentColor, setProductForm } = useStateContext();
 
   return (
