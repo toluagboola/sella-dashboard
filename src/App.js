@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
@@ -17,7 +17,6 @@ import {
   Product,
   Products,
   Calendar,
-  Employees,
   Stacked,
   Pyramid,
   Customers,
@@ -115,6 +114,7 @@ const App = () => {
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
