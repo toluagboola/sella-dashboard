@@ -8,12 +8,13 @@ const Button = ({
   text,
   bgHoverColor,
   borderRadius,
+  width,
 }) => {
   return (
     <button
       type="button"
       style={{ backgroundColor: bgColor, color, borderRadius }}
-      className={`text-${size} p-3 hover:drop-shadow-xl hover:bg-${bgHoverColor}`}
+      className={`text-${size} p-3 hover:drop-shadow-xl hover:bg-${bgHoverColor} w-${width}`}
     >
       {icon} {text}
     </button>
