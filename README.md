@@ -2,6 +2,8 @@
 
 This project was built with [React](https://github.com/facebook/create-react-app), [TailwindCSS](https://tailwindcss.com/) and some [Syncfusion](https://www.syncfusion.com/react-components) components.
 
+![Sella Dashboard](https://res.cloudinary.com/dipyaby4f/image/upload/v1667651117/sella.png)
+
 ## Features
 
 This application allows users to
@@ -17,7 +19,7 @@ This application allows users to
 
 ## Setup
 
-To run this application locally,
+To run Sella locally,
 
 - Clone this repo into your machine
 - `cd` into the newly cloned directory
