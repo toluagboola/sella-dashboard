@@ -9,7 +9,7 @@ const Footer = () => {
       <p className="mb-2 text-lg dark:text-gray-400">
         Built by{" "}
         <a
-          href="https://toluagboola.github.io/s"
+          href="https://toluagboola.github.io/"
           className="font-semibold hover:underline"
           style={{ color: currentColor }}
         >
