@@ -1,17 +1,19 @@
 # Sella Vendor Dashboard
 
-This project was built with [React](https://github.com/facebook/create-react-app), [TailwindCSS](https://tailwindcss.com/) and [Syncfusion](https://www.syncfusion.com/react-components) components.
+This project was built with [React](https://github.com/facebook/create-react-app), [TailwindCSS](https://tailwindcss.com/) and some [Syncfusion](https://www.syncfusion.com/react-components) components.
 
 ## Features
 
-This applications allows users to
+This application allows users to
 
-- See an overview of their online store's performance,
-- See a sales overview graph, top customers, top products, recent orders, transactions and more,
-- Add a new product along with an image,
-- View all products in the store with the orders placed for them,
-- View all orders, customers and their details,
-- View notifications.
+- View notifications
+- See an overview of their online store's performance
+- See a sales overview graph, top customers, top products, recent orders, transactions and more
+- Add a new product along with an image
+- View all products in the store with the orders placed for them
+- View all orders, customers and their details
+- Switch between light or dark mode
+- Set a theme color which will be reflected throughout the application.
 
 ## Setup
 
@@ -24,4 +26,4 @@ To run this application locally,
 
 ## Website
 
-This application can be found on [this website](https://sella.netlify.app/).
+Sella can be found and used [here](https://sella.netlify.app/).
